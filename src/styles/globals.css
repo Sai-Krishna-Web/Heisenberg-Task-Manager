@@ -48,6 +48,9 @@ html, body, #__next {
   }
   
   @layer utilities {
+    a{
+      color: #635FC7;
+    }
     .max-h-todos {
       overflow-y: auto;
       max-height: calc(100vh - 70px);

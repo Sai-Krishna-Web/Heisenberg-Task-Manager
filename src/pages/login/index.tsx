@@ -15,8 +15,8 @@ const Login: NextPage = () => {
   return (
     <Layout>
       <main className="p-4">
-        <div className="container mx-auto">
-          <h1 className="text-2xl text-center">Login To Your Account</h1>
+        <div className="container mx-auto max-w-md p-5 shadow-[0_30px_60px_-10px_rgba(6,0,74,0.15)] relative bg-white dark:bg-darkBlue rounded-md ">
+          <h1 className="text-2xl text-center text-[#635FC7]">Login To Your Account</h1>
           <form
             className="w-3/4 max-w-md mt-4 mx-auto"
             onSubmit={async (e) => {
@@ -33,7 +33,7 @@ const Login: NextPage = () => {
             <div className="mb-4">
               <label htmlFor="email" />
               <input
-                className="w-full p-2 border-2 border-gray-900"
+                className="w-full p-2 border-2 border-indigo-900 rounded-md"
                 name="email"
                 type="text"
                 placeholder="Email"
@@ -44,7 +44,7 @@ const Login: NextPage = () => {
             <div className="mb-4">
               <label htmlFor="password" />
               <input
-                className="w-full p-2 border-2 border-gray-900"
+                className="w-full p-2 border-2 border-indigo-900 rounded-md"
                 name="password"
                 type="password"
                 placeholder="Password"
@@ -52,9 +52,9 @@ const Login: NextPage = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 flex justify-center">
               <button
-                className="w-full py-2 px-6 text-gray-50 bg-gray-900"
+                className="py-2 px-6 text-white bg-[#635FC7] hover:bg-[#A8A4FF] rounded-md"
                 type="submit"
               >
                 Login
@@ -65,7 +65,7 @@ const Login: NextPage = () => {
           <p className="text-center">
             Need an account?{" "}
             <Link href="/register">
-              <a>Register</a>
+              <a className="text-[#635FC7]">Register</a>
             </Link>
           </p>
         </div>

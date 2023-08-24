@@ -7,7 +7,7 @@ export const Header = () => {
   const router = useRouter();
 
   return (
-    <div className="py-4  border-b-2 border-indigo-900 text-indigo-900 bg-indigo-100">
+    <div className="py-4  border-b-2 border-indigo-900 text-indigo-900 bg-indigo-100 ">
       <header className="container mx-auto flex flex-row items-center justify-between">
         <h1 className="px-4">
           <Link href="/" >
@@ -16,18 +16,18 @@ export const Header = () => {
         </h1>
 
         <ul className="flex flex-row items-center justify-between">
-          <li className="px-4">
+          <li className="px-4 hover:text-[#A8A4FF]">
             <Link href="/">
               <a>Home</a>
             </Link>
           </li>
 
-          <li className="px-4">
+          <li className="px-4 hover:text-[#A8A4FF] border-r-2 border-indigo-900">
             <Link href="/dashboard">
               <a>Dashboard</a>
             </Link>
           </li>
-          <li className="px-4 border-l-2 border-gray-900">
+          <li className="mx-5 py-1 px-4 text-white bg-[#635FC7] hover:bg-[#A8A4FF] rounded-md">
             {user ? (
               <button
                 type="button"

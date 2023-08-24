@@ -109,7 +109,7 @@ const Dashboard: NextPage = () => {
           <h1 className="text-2xl text-center text-[#635FC7] font-semibold">Your Dashboard</h1>
           <button
             onClick={() => setAddTaskModel(true)}
-            className="bg-[#635FC7] hover:bg-[#A8A4FF] duration-200 flex justify-center items-center gap-[0.5rem] w-[10rem] h-[3rem] rounded-full"
+            className="bg-[#635FC7] hover:bg-[#A8A4FF] duration-200 flex justify-center items-center gap-[0.5rem] w-[10rem] py-2 rounded-md"
           >
             <p className="text-white font-semibold">Add New Task</p>
           </button>
@@ -142,7 +142,9 @@ const Dashboard: NextPage = () => {
                 ))}
               </div>
         </section>):(
-          <h3>No items</h3>
+          <div className=" flex justify-center py-5">
+            <h3>No Tasks found</h3>
+          </div>
         )}
 
       </section>
