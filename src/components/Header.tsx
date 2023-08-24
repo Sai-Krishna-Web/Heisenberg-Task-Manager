@@ -44,7 +44,7 @@ export const Header = () => {
               </button>
             ) : (
               <Link href="/login">
-                <a>Login</a>
+                <a className="text-white">Login</a>
               </Link>
             )}
           </li>
