@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+    height: 100%;
+}
+
+@layer base {
+    body {
+      font-size: 16px;
+      background-color: hsl(0, 0%, 98%);
+    }
+    body .dark {
+      background-color: hsl(235, 21%, 11%);
+    }
+    @screen sm {
+      body {
+        font-size: 18px;
+      }
+    }
+    .max-h-todos::-webkit-scrollbar {
+      width: 0.5em;
+    }
+  
+    .max-h-todos::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+  
+    .max-h-todos::-webkit-scrollbar-thumb {
+      background-color: rgb(182, 182, 242);
+      border-radius: 10px;
+      border-bottom: solid 1px rgb(146, 146, 174);
+    }
+    .dark .max-h-todos::-webkit-scrollbar-thumb {
+      background-color: hsl(240, 9%, 23%);
+      border-bottom: solid 1px hsl(240, 12%, 13%);
+    }
+  }
+  
+  @layer components {
+    .menuButton {
+      @apply hover:text-gray-900 dark:hover:text-gray-200;
+    }
+    .menuButton.active {
+      @apply text-blue-600 dark:text-blue-600;
+    }
+  }
+  
+  @layer utilities {
+    .max-h-todos {
+      overflow-y: auto;
+      max-height: calc(100vh - 70px);
+    }
+    @screen sm {
+      .max-h-todos {
+        max-height: calc(100vh - 70px);
+      }
+    }
+  }
