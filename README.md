@@ -7,6 +7,8 @@
 
 <h4 align="center">A task manager application made with <a href="https://nextjs.org/" target="_blank">Next</a>, <a href="https://firebase.google.com/" target="_blank">Firebase</a> and <a href="https://tailwindcss.com/" target="_blank">Tailwind</a></h4>
 
+- Live Site URL: [Kanban Task Management](https://kanban-smoky.vercel.app/)
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -15,21 +17,30 @@ You will need to create a firebase project and configure a `.env.local` wiith re
 
 ## Getting Started
 
-Clone this repository
-`https://github.com/Sai-Krishna-Web/Heisenberg-Task-Manager.git`
-
-Change to project directory
-`cd Heisenberg-Task-Manager`
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Clone this repository
+  ```bash
+  git clone https://github.com/Sai-Krishna-Web/Heisenberg-Task-Manager.git
+  ```
+- Change to project directory
+  ```bash
+  cd Heisenberg-Task-Manager
+  ```
+- Install packages and modules
+  ```bash
+  npm install
+  # or
+  yarn install
+  # or
+  pnpm install
+  ```
+- Run the development server:
+  ```bash
+  npm run dev
+  # or
+  yarn dev
+  # or
+  pnpm dev
+  ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
