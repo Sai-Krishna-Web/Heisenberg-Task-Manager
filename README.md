@@ -7,7 +7,7 @@
 
 <h4 align="center">A task manager application made with <a href="https://nextjs.org/" target="_blank">Next</a>, <a href="https://firebase.google.com/" target="_blank">Firebase</a> and <a href="https://tailwindcss.com/" target="_blank">Tailwind</a></h4>
 
-- Live Site URL: [Kanban Task Management](https://kanban-smoky.vercel.app/)
+##Live Site URL: [Heisenberg Task Manager](https://heisenberg-task-manager.vercel.app/)
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
