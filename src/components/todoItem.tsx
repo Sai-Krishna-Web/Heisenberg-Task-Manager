@@ -99,7 +99,7 @@ const TodoItem = ({
           )}
         </div>
         <div>
-          <p className="dark:text-gray font-semibold group-hover:text-[#635FC7] peer-checked:text-gray-500 peer-checked:line-through">
+          <p className="dark:text-gray-700 font-semibold group-hover:text-[#635FC7] peer-checked:text-gray-500 peer-checked:line-through">
             {title}
           </p>
           <p className="text-[#828FA3] font-medium peer-checked:text-gray-500 ">

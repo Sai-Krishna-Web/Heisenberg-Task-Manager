@@ -7,9 +7,22 @@ import { useAuth } from "context/AuthContext";
 const Register: NextPage = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
   const { register } = useAuth();
   const router = useRouter();
+
+  const handleError = (error: any) => {
+    if (error.code.includes('email-already-in-use')) {
+      setError('User with email already exist, Please login!');
+      return;
+    }
+    if (error.code.includes('weak-password')) {
+      setError('Password should be at least 6 characters');
+      return;
+    }
+    setError('Something went wrong, Try again or contact tech team!');
+  }
 
   return (
     <Layout>
@@ -25,7 +38,7 @@ const Register: NextPage = () => {
                 await register(email, password);
                 await router.push("/dashboard");
               } catch (error) {
-                console.log(error);
+                handleError(error);
               }
             }}
           >
@@ -61,6 +74,7 @@ const Register: NextPage = () => {
               </button>
             </div>
           </form>
+          {error && <p className=" text-center text-red-500 text-sm">{error}</p>}
         </div>
       </main>
     </Layout>

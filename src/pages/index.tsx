@@ -6,8 +6,8 @@ import { Layout } from "layout";
 const Home: NextPage = () => {
   return (
     <Layout>
-      <main className="p-4 gap-5">
-        <div className="container mx-auto flex flex-col">
+      <main className=" container mx-auto p-4 gap-5">
+        <div className="flex flex-col">
           <div className="flex gap-[1.5rem]  w-full justify-between">
             <h1 className="text-2xl text-center">Heisenberg Task Manager</h1>
             <Link href="https://github.com/Sai-Krishna-Web/Heisenberg-Task-Manager">
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           <h4 >A task manager application made with <a href="https://nextjs.org/" >Next</a>, <a href="https://firebase.google.com/" >Firebase</a> and <a href="https://tailwindcss.com/" >Tailwind</a></h4>
         </div>
         <div className="my-5 flex">
-          <div className="mx-5 py-1 px-4 text-white bg-[#635FC7] hover:bg-[#A8A4FF] rounded-md">
+          <div className="mr-5 py-1 px-4 text-white bg-[#635FC7] hover:bg-[#A8A4FF] rounded-md">
             <Link href="https://heisenberg-task-manager.vercel.app/">
               <a className="text-white">Demo</a>
             </Link>

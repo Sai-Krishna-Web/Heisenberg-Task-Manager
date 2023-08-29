@@ -4,13 +4,28 @@ import Link from "next/link";
 import { Layout } from "layout";
 import { useRouter } from "next/router";
 import { useAuth } from "../../context/AuthContext";
+import { UserCredential } from "@firebase/auth";
 
 const Login: NextPage = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
   const { login } = useAuth();
   const router = useRouter();
+
+  const handleError = (error: any) => {
+    if (error.code.includes('user-not-found')) {
+      setError('User with email does not exist, Please register!');
+      return;
+    }
+    if (error.code.includes('wrong-password')) {
+      setError('Wrong  passwoord, Try again with correct credentials!');
+      return;
+    }
+    setError('Something went wrong, Try again or contact tech team!');
+  }
+
 
   return (
     <Layout>
@@ -26,7 +41,7 @@ const Login: NextPage = () => {
                 await login(email, password);
                 await router.push("/dashboard");
               } catch (error) {
-                console.log(error);
+                handleError(error);
               }
             }}
           >
@@ -68,6 +83,7 @@ const Login: NextPage = () => {
               <a className="text-[#635FC7]">Register</a>
             </Link>
           </p>
+          {error && <p className=" text-center text-red-500 text-sm">{error}</p>}
         </div>
       </main>
     </Layout>

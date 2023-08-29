@@ -8,7 +8,7 @@ export const Header = () => {
 
   return (
     <div className="py-4  border-b-2 border-indigo-900 text-indigo-900 bg-indigo-100 ">
-      <header className="container mx-auto flex flex-row items-center justify-between">
+      <header className="mx-5 flex flex-row items-center justify-between">
         <h1 className="px-4">
           <Link href="/" >
             <a className="font-semibold">HeisenBerg Task Manager</a>

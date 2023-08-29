@@ -40,10 +40,13 @@ html, body, #__next {
   
   @layer components {
     .menuButton {
-      @apply hover:text-gray-900 dark:hover:text-gray-200;
+      @apply hover:text-blue-600 dark:hover:text-blue-600;
     }
     .menuButton.active {
       @apply text-blue-600 dark:text-blue-600;
+    }
+    .clearAllButton{
+      @apply hover:text-red-600 dark:hover:text-red-600;
     }
   }
   
